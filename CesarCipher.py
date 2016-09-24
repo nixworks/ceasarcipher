@@ -43,9 +43,14 @@ class CesarCipher(object):
         return result_text
 
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = []
+
+for i in range(ord('a'),ord('z')+1):
+    alphabet.append(chr(i))
+
 text = raw_input('Please enter your string: ')
 shift = int(raw_input('Please enter a shift value(must be an integer): '))
+
 instance = CesarCipher()
 instance.set_alphabet(alphabet)
 instance.set_shift(shift)
